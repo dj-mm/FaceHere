@@ -10,15 +10,17 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 20px 0; /* Added padding to create margin from top and bottom */
       background: linear-gradient(135deg, #ff7eb3, #ff758c, #fdd68f);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       transition: background 1s ease-in-out;
+      box-sizing: border-box; /* Ensures padding doesn't affect layout */
+      flex-direction: column;
     }
-  
+
     .container {
       width: 100%;
       max-width: 400px;
@@ -28,13 +30,14 @@
       text-align: center;
       padding: 20px;
       box-sizing: border-box;
+      margin-bottom: 60px; /* Added margin to give space for footer */
     }
-  
+
     h1 {
       font-size: 22px;
       margin-bottom: 10px;
     }
-  
+
     button {
       padding: 10px 20px;
       border: none;
@@ -44,27 +47,27 @@
       font-size: 16px;
       width: 100%;
     }
-  
+
     .start {
       background-color: #007bff;
       color: white;
     }
-  
+
     .stop {
       background-color: #6c757d;
       color: white;
     }
-  
+
     .capture {
       background-color: #28a745;
       color: white;
     }
-  
+
     .restart {
       background-color: #ff5722;
       color: white;
     }
-  
+
     select {
       padding: 10px;
       border-radius: 5px;
@@ -72,18 +75,18 @@
       font-size: 16px;
       width: 100%;
     }
-  
+
     .info {
       margin-top: 15px;
       font-size: 18px;
     }
-  
+
     video, canvas {
       width: 100%;
       border-radius: 8px;
       margin-top: 10px;
     }
-  
+
     img {
       width: 100%;
       margin-top: 10px;
@@ -97,32 +100,32 @@
         padding: 15px;
         width: 90%;
       }
-  
+
       h1 {
         font-size: 20px;
       }
-  
+
       button {
         font-size: 14px;
         padding: 8px 16px;
       }
-  
+
       select {
         font-size: 14px;
         padding: 8px;
       }
     }
-  
+
     @media (max-width: 400px) {
       h1 {
         font-size: 18px;
       }
-  
+
       button {
         font-size: 12px;
         padding: 6px 12px;
       }
-  
+
       select {
         font-size: 12px;
         padding: 6px;
@@ -134,10 +137,11 @@
       color: #aaa;
       text-align: center;
       padding: 10px;
-      position: absolute;
+      position: sticky;
       bottom: 0;
       width: 100%;
       font-size: 14px;
+      margin-top: auto; /* Ensures the footer stays at the bottom */
     }
 
     footer a {
